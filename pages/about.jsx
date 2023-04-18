@@ -3,3 +3,13 @@ export default function About() {
         <div>About</div>
     )
 }
+
+About.getLayout = function getLayout(page) {
+    return (
+        <>
+            {page}
+            <h2>Custom Layout</h2>
+        </>
+
+    )
+}

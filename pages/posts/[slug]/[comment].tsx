@@ -6,6 +6,8 @@ export default function Comment() {
     const query = router.query;
 
     return (
-        <div>Post: {query.slug}, Comment: {query.comment}</div>
+        <>
+            <div>Post: {query.slug}, Comment: {query.comment}</div>
+        </>
     )
 }

@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Layout>
       <Button variant="contained" color="primary">
-        Index
+        Hello, Material UI!
       </Button>
       </Layout>
     </div>

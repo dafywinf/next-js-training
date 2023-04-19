@@ -8,6 +8,8 @@ export default function Navbar() {
             <Link href="/site-map">Site Map</Link> 
             &nbsp;|&nbsp;
             <Link href="/about">About</Link>
+            &nbsp;|&nbsp;
+            <Link href="/theme">Theme</Link>
         </div>
     );
 }

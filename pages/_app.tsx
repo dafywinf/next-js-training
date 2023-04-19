@@ -1,15 +1,16 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { FC } from "react";
+import { EmotionCache } from "@emotion/react";
+import { AppProps } from "next/app";
+import PageProvider from "../src/components/helpers/PageProvider";
 
-import Layout from '@/components/layout'
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
-
-  //TODO - https://nextjs.org/docs/basic-features/layouts
-  //const getLayout = Component.getLayout || ((page) => page)
+export interface MUIAppProps extends AppProps {
+  emotionCache?: EmotionCache;
 }
+
+const App: FC<MUIAppProps> = ({ Component, pageProps, emotionCache }) => (
+  <PageProvider emotionCache={emotionCache}>
+    <Component {...pageProps} />
+  </PageProvider>
+);
+
+export default App;

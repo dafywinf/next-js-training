@@ -1,5 +1,5 @@
-import Layout from '../components/layout';
 import { Button } from '@mui/material';
+import Layout from '../src/components/Layout';
 
 export default function Home() {
   return (

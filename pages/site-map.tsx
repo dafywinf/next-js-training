@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
 
+import Layout from "../src/components/Layout";
+
 export default function SiteMap() {
 
     const pageIds = [1, 2, 3, 4];
@@ -10,6 +12,7 @@ export default function SiteMap() {
             <Head>
                 <title>This is the tile page</title>
             </Head>
+            <Layout>
             <div>Site Map</div>
             <ul>
                 <li>
@@ -42,6 +45,7 @@ export default function SiteMap() {
 
 
             </ul>
+            </Layout>
         </>
     )
 

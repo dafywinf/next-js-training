@@ -1,12 +1,12 @@
-import Layout from '../src/components/Layout';
 import { Button } from '@mui/material';
+import Layout from '../src/components/Layout';
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <Layout>
       <Button variant="contained" color="primary">
-        Index
+        About Page
       </Button>
       </Layout>
     </div>

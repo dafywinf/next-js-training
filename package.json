@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/node": "18.15.13",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "typescript": "5.0.4"
   }
 }

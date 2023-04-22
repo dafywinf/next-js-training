@@ -1,15 +1,32 @@
-import React from "react";
+import * as React from 'react';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Navbar from "./Navbar";
+import Button from '@mui/material/Button';
+import Link from './Link';
+import ProTip from './ProTip';
+import Copyright from './Copyright';
 
-export default function Layout(params: { children: any }) {
+type LayoutProps = {
+  children: React.ReactNode,
+};
 
+export default function Layout({children} :LayoutProps) {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <Navbar />
-            <Box sx={{ p: 2 }}>
-                {params.children}
-            </Box>
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            my: 4,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          {children}
+          <ProTip />
+          <Copyright />
         </Box>
+      </Container>
     );
-}
+  }

@@ -23,6 +23,12 @@ const theme = createTheme({
     },
   },
   typography: {
+    body1: {
+      fontSize: 13,
+    },
+    body2: {
+      fontSize: 11,
+    },
     fontFamily: roboto.style.fontFamily,
   },
 });

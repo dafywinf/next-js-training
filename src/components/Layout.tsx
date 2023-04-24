@@ -6,27 +6,15 @@ import Button from '@mui/material/Button';
 import Link from './Link';
 import ProTip from './ProTip';
 import Copyright from './Copyright';
+import SearchAppBar from './SearchAppBar';
 
-type LayoutProps = {
-  children: React.ReactNode,
-};
-
-export default function Layout({children} :LayoutProps) {
-    return (
-      <Container maxWidth="lg">
-        <Box
-          sx={{
-            my: 4,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          {children}
-          <ProTip />
-          <Copyright />
-        </Box>
+export default function Layout(props: React.PropsWithChildren) {
+  return (
+    <>
+      <SearchAppBar></SearchAppBar>
+      <Container sx={{ marginY: 5 }}>
+        {props.children}
       </Container>
-    );
-  }
+    </>
+  );
+}

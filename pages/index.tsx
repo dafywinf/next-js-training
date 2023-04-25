@@ -7,20 +7,27 @@ export default function Index() {
   return (
     <>
       <Layout>
-      <Grid container spacing={2}>
+
         {cities.map((city) => {
           return (
             <>
-              <Typography key={city.id} variant="h4" component="h2" marginTop={5} marginBottom={3}>{city.name} Tours</Typography>
-              {city.tours.map((tour) => {
-                return (
-                  <TourCard key={tour.id}></TourCard>
-                );
-              })}
+              <Typography key={city.id}
+                variant="h4"
+                component="h2"
+                marginTop={5}
+                marginBottom={3}>Top {city.name} Tours</Typography>
+              <Grid container spacing={2}>
+                {city.tours.map((tour) => {
+                  console.log(tour);
+                  return (
+                    <TourCard key={tour.id} tour={tour}></TourCard>
+                  );
+                })}
+              </Grid>
             </>
           )
         })}
-      </Grid>
+
       </Layout>
     </>
   );
